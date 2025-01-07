@@ -22,6 +22,10 @@ input {
         top: 50%;
         right: 3rem;
         transform: translateY(-50%);
+
+        &.copied {
+            visibility: visible;
+        }
     }
 
     img {

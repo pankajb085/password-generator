@@ -49,17 +49,37 @@ function App() {
     const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numbers = "0123456789";
     const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
-
+    debugger;
+    const checkedArray = arr.filter(item => item.checked);
+    const checkedLabels = checkedArray.map(item => {
+      return item.label;
+    })
      // Ensure at least one character from each set
-    const allChars = lowerCase + upperCase + numbers + symbols;
+    let allChars = "";
     let password = "";
-    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    password += upperCase[Math.floor(Math.random() * upperCase.length)];
-    password += numbers[Math.floor(Math.random() * numbers.length)];
-    password += symbols[Math.floor(Math.random() * symbols.length)];
+
+    if(checkedLabels.includes("Include Lowercase Letters")) {
+      password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+      allChars += lowerCase;
+    }
+
+    if(checkedLabels.includes("Include Uppercase Letters")) {
+      password += upperCase[Math.floor(Math.random() * upperCase.length)];
+      allChars += upperCase;
+    }
+
+    if(checkedLabels.includes("Include Numbers")) {
+      password += numbers[Math.floor(Math.random() * numbers.length)];
+      allChars += numbers;
+    }
+
+    if(checkedLabels.includes("Include Symbols")) {
+      password += symbols[Math.floor(Math.random() * symbols.length)];
+      allChars += symbols;
+    }
     
     // Fill the rest of the password
-    for (let i = 4; i < charLength; i++) {
+    for (let i = checkedArray.length; i < charLength; i++) {
       password += allChars[Math.floor(Math.random() * allChars.length)];
     }
     
