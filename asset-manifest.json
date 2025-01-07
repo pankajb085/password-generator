@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/password-generator/static/css/main.4d95d7d3.css",
+    "main.js": "/password-generator/static/js/main.8db5570f.js",
+    "static/js/488.daeb6f59.chunk.js": "/password-generator/static/js/488.daeb6f59.chunk.js",
+    "static/media/JetBrainsMono-VariableFont_wght.ttf": "/password-generator/static/media/JetBrainsMono-VariableFont_wght.ebc33bd57e78956d75ad.ttf",
+    "static/media/icon-copy.svg": "/password-generator/static/media/icon-copy.c00fcf20217a486689713679f8ec9e05.svg",
+    "static/media/icon-copy-active.svg": "/password-generator/static/media/icon-copy-active.ad3b2b28ac88fbda349e.svg",
+    "index.html": "/password-generator/index.html",
+    "static/media/icon-arrow-right-active.svg": "/password-generator/static/media/icon-arrow-right-active.ac1d162ad1bf440788a8.svg",
+    "static/media/icon-arrow-right.svg": "/password-generator/static/media/icon-arrow-right.6f919c9ee4525a9948a9e391ae915648.svg",
+    "static/media/icon-check.svg": "/password-generator/static/media/icon-check.c0e2bb9365c6d9e8bbe4.svg",
+    "main.4d95d7d3.css.map": "/password-generator/static/css/main.4d95d7d3.css.map",
+    "main.8db5570f.js.map": "/password-generator/static/js/main.8db5570f.js.map",
+    "488.daeb6f59.chunk.js.map": "/password-generator/static/js/488.daeb6f59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d95d7d3.css",
+    "static/js/main.8db5570f.js"
+  ]
+}
