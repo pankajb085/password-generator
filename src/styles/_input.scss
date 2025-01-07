@@ -1,0 +1,57 @@
+@use "variables" as *;
+
+input {
+    padding: $padding-mobile;
+    background-color: $clr-dark-grey;
+    color: $clr-white;
+    font-family: "JetBrainsMono";
+    font-size: $fnt-size-medium;
+    cursor: pointer;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+    
+    span {
+        visibility: hidden;
+        text-transform: uppercase;
+        font-size: $fnt-size-regular;
+        color: $clr-green;
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        transform: translateY(-50%);
+    }
+
+    img {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: $padding-mobile;
+        transform: translateY(-50%);
+
+        &:hover {
+            content: url('../assets/images/icon-copy-active.svg');
+        }
+    }
+}
+
+@media screen and (width >= 600px) {
+    input {
+        padding-inline: $padding-tablet;
+        font-size: $fnt-size-large;
+    }  
+
+    .input-container {
+        margin-bottom: 1.5rem;
+        
+        span {
+            right: 4.25rem;
+        }
+
+        img {
+            right: $padding-tablet;
+        }
+    }
+}

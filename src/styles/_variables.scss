@@ -1,0 +1,22 @@
+$clr-red: #F64A4A;
+$clr-orange: #FB7C58;
+$clr-yellow: #F8CD65;
+$clr-green: #A4FFAF;
+$clr-white: #E6E5EA;
+$clr-grey: #817D92;
+$clr-dark-grey: #24232C;
+$clr-very-dark-grey: #18171F;
+$clr-bgrnd: #08070B;
+
+$fnt-size-large: 2rem;
+$fnt-size-medium: 1.5rem;
+$fnt-size-regular: 1.125rem;
+
+$padding-mobile: 1rem;
+$padding-tablet: 2rem;
+
+:export {
+    green: $clr-green;
+    white: $clr-white;
+    veryDarkGrey: $clr-very-dark-grey;
+}

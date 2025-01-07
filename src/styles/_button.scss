@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+button {
+    background-color: $clr-green;
+    color: $clr-dark-grey;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "JetBrainsMono";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $clr-dark-grey;
+        border-color: $clr-green;
+        color: $clr-green;
+        img {
+            content: url('../assets/images/icon-arrow-right-active.svg');
+        }
+    }
+
+}
+
+@media screen and (width >= 600px) {
+    button {
+        font-size: $fnt-size-regular;
+        gap: 1.5rem;
+        padding-block: 1.25rem;
+    }
+}

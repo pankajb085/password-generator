@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+.slider-value {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    span {
+        color: $clr-green;
+        font-size: $fnt-size-medium;
+    }
+}
+
+@media screen and (width >= 600px) {
+    .slider-value {
+        font-size: $fnt-size-regular;
+        margin-bottom: 1rem;
+        span {
+            font-size: $fnt-size-large;
+        }
+    }
+}

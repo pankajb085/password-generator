@@ -1,0 +1,56 @@
+@use "variables" as *;
+
+.transparent {
+    border-color: transparent;
+}
+
+.parent {
+    display: flex;
+    width: 4rem;
+    height: 28px;
+    gap: .5rem;
+
+    .child {
+        width: 10px;
+        border: 2px solid $clr-white;
+
+        &.active1 {
+            background-color: $clr-red;
+            &1 {
+                background-color: $clr-orange;
+                &1 {
+                    background-color: $clr-yellow;
+                    &1 {
+                        background-color: $clr-green;
+                    }
+                }
+            }
+        }
+    
+        &.active2 {
+            background-color: $clr-orange;
+            &2 {
+                background-color: $clr-yellow;
+                &2 {
+                    background-color: $clr-green;
+                }
+            }
+        }
+        
+        &.active3 {
+            background-color: $clr-yellow;
+            &3 {
+                background-color: $clr-green;
+            }
+        }
+    
+        &.active4 {
+            background-color: $clr-green;
+        }
+    }
+
+    div[class^="active"]{
+        border-color: transparent;
+    }
+
+}

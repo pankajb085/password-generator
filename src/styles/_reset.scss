@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, body, p {
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    width: 100%;
+    border: none;
+}
