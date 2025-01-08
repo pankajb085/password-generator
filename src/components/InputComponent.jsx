@@ -16,7 +16,8 @@ function InputComponent({value, setValue}) {
 
   return (
     <div className="input-container">
-      <input type="text" placeholder="P4$5W0rD!" value={value} onChange={setValue} readOnly />
+      <input type="text" tabIndex="-1" placeholder="P4$5W0rD!" id="pass" value={value} onChange={setValue} readOnly />
+      <label htmlFor="pass"></label>
       <span className={className}>Copied</span>
       <img src={copyIcon} onClick={handleCopy} className="copy-icon" alt="Copy" />
     </div>

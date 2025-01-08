@@ -6,18 +6,18 @@ import StrengthMeterComp from "./components/StrengthMeterComp";
 import Button from "./components/Button";
 
 function App() {
-  const includeArray = [{label: "Include Uppercase Letters", checked: false}, {label: "Include Lowercase Letters", checked: false},
-     {label: "Include Numbers", checked: false}, {label: "Include Symbols", checked: false}];
+  const includeArray = [{label: "Include Uppercase Letters", checked: false, id:"1"}, {label: "Include Lowercase Letters", checked: false, id:"2"},
+     {label: "Include Numbers", checked: false, id:"3"}, {label: "Include Symbols", checked: false, id:"4"}];
 
   const [arr, setArr] = useState(includeArray);
   const [charLength, setCharLength] = useState(10);
   const [password, setPassword] = useState("");
 
   const handleChange = (evnt) => {
-    const {id, checked} = evnt.target;
+    const {name, checked} = evnt.target;
 
     const modifiedData = arr.map(item => {
-      if(item.label === id){
+      if(item.label === name){
         return {
           ...item,
           checked
@@ -90,27 +90,29 @@ function App() {
   };
 
   return (
-    <div className="generator">
-      <h1 className="title">Password Generator</h1>
-      <InputComponent value={password} setValue={(e) => setPassword(e.target.value)} />
-      <div className="pass-generator">
-        <SliderComponent charLength={charLength} setCharLength={setCharLength} />
-        <div className="checkboxes">
-          {
-            arr.map(item => <CheckboxComp checked={item.checked} key={item.label} label={item.label}
-               handleChange={(e) => handleChange(e)} />)
-          }
-        </div>
-        <div className="strength">
-          <span className="label">Strength</span>
-          <div className="medium-block">
-            <span className="medium">{getStrengthLabel()}</span>
-            <StrengthMeterComp checked={getStrengthLabel("count")}/>
+    <main>
+      <div className="generator">
+        <h1 className="title">Password Generator</h1>
+        <InputComponent value={password} setValue={(e) => setPassword(e.target.value)} />
+        <div className="pass-generator">
+          <SliderComponent charLength={charLength} setCharLength={setCharLength} />
+          <div className="checkboxes">
+            {
+              arr.map(item => <CheckboxComp checked={item.checked} id={item.id} key={item.id} label={item.label}
+                handleChange={(e) => handleChange(e)} />)
+            }
           </div>
+          <div className="strength">
+            <span className="label">Strength</span>
+            <div className="medium-block">
+              <span className="medium">{getStrengthLabel()}</span>
+              <StrengthMeterComp checked={getStrengthLabel("count")}/>
+            </div>
+          </div>
+          <Button onClick={generatePassword} />
         </div>
-        <Button onClick={generatePassword} />
       </div>
-    </div>
+    </main>
   );
 }
 
