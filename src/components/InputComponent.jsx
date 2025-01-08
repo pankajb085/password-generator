@@ -6,12 +6,14 @@ function InputComponent({value, setValue}) {
   const [className, setClassName] = useState("");
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(value);
-    setClassName("copied");
-
-    setTimeout(() => {
-      setClassName("");
-    }, 2000);
+    if(value){
+      navigator.clipboard.writeText(value);
+      setClassName("copied");
+  
+      setTimeout(() => {
+        setClassName("");
+      }, 2000);
+    }
   };
 
   return (
